@@ -1,0 +1,48 @@
+* telega-rc
+
+telega-rc is [[https://github.com/zevlg/telega.el][telega.el]] and [[https://github.com/tdlib/td.git][tdlib]] release build resource.
+
+current telega-version output:
+=telega v0.8.660 (TDLib v1.8.66-022d602) (telega-server v1.2.0)=
+
+* Usage
+
+1. copy =libtdjson.dll= to a directory in the PATH environment variable
+2. copy =telega-server.exe= to a ~/.telega/ directory
+
+* Note
+
+you PATH environment variable need MSYS2 UCRT64 dependence
+
+ldd output:
+
+#+begin_src text
+ldd libtdjson.dll
+	ntdll.dll => /c/Windows/SYSTEM32/ntdll.dll (0x7fffd6550000)
+	KERNEL32.DLL => /c/Windows/System32/KERNEL32.DLL (0x7fffd5ed0000)
+	KERNELBASE.dll => /c/Windows/System32/KERNELBASE.dll (0x7fffd4180000)
+	msvcrt.dll => /c/Windows/System32/msvcrt.dll (0x7fffd5f90000)
+	CRYPT32.dll => /c/Windows/System32/CRYPT32.dll (0x7fffd3e50000)
+	ucrtbase.dll => /c/Windows/System32/ucrtbase.dll (0x7fffd4480000)
+	Normaliz.dll => /c/Windows/System32/Normaliz.dll (0x7fffd4fd0000)
+	PSAPI.DLL => /c/Windows/System32/PSAPI.DLL (0x7fffd6030000)
+	WS2_32.dll => /c/Windows/System32/WS2_32.dll (0x7fffd45d0000)
+	RPCRT4.dll => /c/Windows/System32/RPCRT4.dll (0x7fffd6040000)
+	libwinpthread-1.dll => /ucrt64/bin/libwinpthread-1.dll (0x7fffcdae0000)
+	libstdc++-6.dll => /ucrt64/bin/libstdc++-6.dll (0x7fffb96b0000)
+	libssl-3-x64.dll => /ucrt64/bin/libssl-3-x64.dll (0x7fff69fe0000)
+	zlib1.dll => /ucrt64/bin/zlib1.dll (0x7fffbfdc0000)
+	libgcc_s_seh-1.dll => /ucrt64/bin/libgcc_s_seh-1.dll (0x7fffc15f0000)
+	libcrypto-3-x64.dll => /ucrt64/bin/libcrypto-3-x64.dll (0x7fff67370000)
+	ADVAPI32.dll => /c/Windows/System32/ADVAPI32.dll (0x7fffd46a0000)
+	libcrypto-3-x64.dll => /ucrt64/bin/libcrypto-3-x64.dll (0xf40000)
+	sechost.dll => /c/Windows/System32/sechost.dll (0x7fffd5070000)
+	USER32.dll => /c/Windows/System32/USER32.dll (0x7fffd6370000)
+	win32u.dll => /c/Windows/System32/win32u.dll (0x7fffd4580000)
+	GDI32.dll => /c/Windows/System32/GDI32.dll (0x7fffd4a60000)
+	gdi32full.dll => /c/Windows/System32/gdi32full.dll (0x7fffd4060000)
+	msvcp_win.dll => /c/Windows/System32/msvcp_win.dll (0x7fffd3cc0000)
+	CRYPTBASE.DLL => /c/Windows/System32/CRYPTBASE.DLL (0x7fffd3510000)
+	bcryptPrimitives.dll => /c/Windows/System32/bcryptPrimitives.dll (0x7fffd3c30000)
+	IMM32.DLL => /c/Windows/System32/IMM32.DLL (0x7fffd4fa0000)
+#+end_src
