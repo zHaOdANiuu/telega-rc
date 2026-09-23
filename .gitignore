@@ -1,3 +1,5 @@
+build
 libtdjson.dll
 telega-server.exe
+tgs2png.exe
 windows-x64-msys2-ucrt64.tar.gz
